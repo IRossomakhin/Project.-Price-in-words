@@ -1,3 +1,5 @@
+package otusProject.ProjectCurrency;
+
 public class NameNumbers {
     public static String[][] nameNumbers;
 

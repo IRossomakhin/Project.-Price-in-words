@@ -1,8 +1,10 @@
+package otusProject.ProjectCurrency;
+
 public class NameNumberClass {
     public static String[][] nameClass;
 
      static {
-        nameClass = new String[6][3];
+        nameClass = new String[8][3];
         nameClass[1][0] = "тысяча";
         nameClass[1][1] = "тысячи";
         nameClass[1][2] = "тысяч";
@@ -18,5 +20,11 @@ public class NameNumberClass {
         nameClass[5][0] = "квадриллион";
         nameClass[5][1] = "квадриллиона";
         nameClass[5][2] = "квадриллионов";
-    }
+        nameClass[6][0] = "секстиллион";
+        nameClass[6][1] = "секстиллиона";
+        nameClass[6][2] = "секстиллионов";
+        nameClass[7][0] = "септиллион";
+        nameClass[7][1] = "септиллиона";
+        nameClass[7][2] = "септиллионов";
+     }
 }

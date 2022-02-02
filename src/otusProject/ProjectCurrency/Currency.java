@@ -1,8 +1,10 @@
+package otusProject.ProjectCurrency;
+
 public class Currency {
-    private final int idCurrency;
-    private static String nominativeSingular;
-    private static String genitiveSingular;
-    private static String genitivePlural;
+    public final int idCurrency;
+    public static String nominativeSingular;
+    public static String genitiveSingular;
+    public static String genitivePlural;
 
    Currency(int idCurrency, String nominativeSingular, String genitiveSingular, String genitivePlural) {
         this.idCurrency = idCurrency;

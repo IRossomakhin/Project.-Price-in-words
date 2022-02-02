@@ -1,17 +1,19 @@
+package otusProject.ProjectCurrency;
+
 public class NumbersInLetters {
     long numberPrice;
-    public static String finalNumber;
-    public static String aaa;
-    public static String ddd;
-    public static String numberSign;
+    public  String finalNumber;
+    public  String nameNumbersClass;
+    public  String numeralWordsString;
+    public  String numberSign;
 
-    public void setNumber(long numberPrice) {
+    public void setNumeralsNumber(long numberPrice) {
         this.numberPrice = numberPrice;
     }
 
     public final void getNumeralsNumber() {
         int[] newNumeralsNumber = new int[3];
-        ddd = "";
+        numeralWordsString = "";
         numberSign = "";
         int i = 0;
 
@@ -36,25 +38,25 @@ public class NumbersInLetters {
                 finalNumber = "";
             } else {
                 if (newNumeralsNumber[1] == 1) {
-                    String b = NameNumbers.nameNumbers[1][newNumeralsNumber[0]];
-                    String c = NameNumbers.nameNumbers[3][newNumeralsNumber[2]];
-                    finalNumber = c + " " + b;
+                    String theSecondNumber = NameNumbers.nameNumbers[1][newNumeralsNumber[0]];
+                    String theThirdNumber = NameNumbers.nameNumbers[3][newNumeralsNumber[2]];
+                    finalNumber = theThirdNumber + " " + theSecondNumber;
                 } else {
                     if (newNumeralsNumber[0] == 0) {
-                        String b = NameNumbers.nameNumbers[2][newNumeralsNumber[1]];
-                        String c = NameNumbers.nameNumbers[3][newNumeralsNumber[2]];
-                        finalNumber = c + " " + b;
+                        String theSecondNumber = NameNumbers.nameNumbers[2][newNumeralsNumber[1]];
+                        String theThirdNumber = NameNumbers.nameNumbers[3][newNumeralsNumber[2]];
+                        finalNumber = theThirdNumber + " " + theSecondNumber;
                     } else {
                         if (i == 1 & newNumeralsNumber[0] > 0 & newNumeralsNumber[0] < 3) {
-                            String a = NameNumbers.nameNumbers[4][newNumeralsNumber[0]];
-                            String b = NameNumbers.nameNumbers[2][newNumeralsNumber[1]];
-                            String c = NameNumbers.nameNumbers[3][newNumeralsNumber[2]];
-                            finalNumber = c + " " + b + " " + a;
+                            String theFirstNumber = NameNumbers.nameNumbers[4][newNumeralsNumber[0]];
+                            String theSecondNumber = NameNumbers.nameNumbers[2][newNumeralsNumber[1]];
+                            String theThirdNumber = NameNumbers.nameNumbers[3][newNumeralsNumber[2]];
+                            finalNumber = theThirdNumber + " " + theSecondNumber + " " + theFirstNumber;
                         } else {
-                            String a = NameNumbers.nameNumbers[0][newNumeralsNumber[0]];
-                            String b = NameNumbers.nameNumbers[2][newNumeralsNumber[1]];
-                            String c = NameNumbers.nameNumbers[3][newNumeralsNumber[2]];
-                            finalNumber = c + " " + b + " " + a;
+                            String theFirstNumber = NameNumbers.nameNumbers[0][newNumeralsNumber[0]];
+                            String theSecondNumber = NameNumbers.nameNumbers[2][newNumeralsNumber[1]];
+                            String theThirdNumber = NameNumbers.nameNumbers[3][newNumeralsNumber[2]];
+                            finalNumber = theThirdNumber + " " + theSecondNumber + " " + theFirstNumber;
                         }
                     }
                 }
@@ -63,42 +65,41 @@ public class NumbersInLetters {
 
             if (newNumeralsNumber[1] == 1) {
                 if (i == 0) {
-                    aaa = Currency.getGenitivePlural();
+                    nameNumbersClass = Currency.getGenitivePlural();
                 } else {
-                    aaa = NameNumberClass.nameClass[i][2];
+                    nameNumbersClass = NameNumberClass.nameClass[i][2];
                 }
                 // - 1 Род.падеж Мн.число - рублей";
             } else {
                 if (newNumeralsNumber[0] == 1) {
                     if (i == 0) {
-                        aaa = Currency.getNominativeSingular();
+                        nameNumbersClass = Currency.getNominativeSingular();
                     } else {
-                        aaa = NameNumberClass.nameClass[i][0];
+                        nameNumbersClass = NameNumberClass.nameClass[i][0];
                     }
                     //" -2 Имен.падеж Ед.число - рубль";
 
                 } else {
                     if (newNumeralsNumber[0] > 1 & newNumeralsNumber[0] < 5) {
                         if (i == 0) {
-                            aaa = Currency.getGenitiveSingular();
+                            nameNumbersClass = Currency.getGenitiveSingular();
                         } else {
-                            aaa = NameNumberClass.nameClass[i][1];
+                            nameNumbersClass = NameNumberClass.nameClass[i][1];
                         }//" -3 Род.падеж Ед.число - рубля";
                     } else {
                         if (i == 0) {
-                            aaa = Currency.getGenitivePlural();
+                            nameNumbersClass = Currency.getGenitivePlural();
                         } else {
                             if (newNumeralsNumber[0] + newNumeralsNumber[1] + newNumeralsNumber[2] == 0) {
-                                aaa = "";
+                                nameNumbersClass = "";
                             } else {
-                                aaa = NameNumberClass.nameClass[i][2];
+                                nameNumbersClass = NameNumberClass.nameClass[i][2];
                             }
                         }//" - 4 Род.падеж Мн.число - рублей";
                     }
                 }
             }
-            //   System.out.println("печатаем в конце " + finalNumber + " " + aaa);
-            ddd = finalNumber + " " + aaa + " " + ddd;
+            numeralWordsString = finalNumber + " " + nameNumbersClass + " " + numeralWordsString;
             if (integerPartClassNumber == 0) {
                 break;
             }
@@ -110,7 +111,7 @@ public class NumbersInLetters {
         if (numberPrice == 0) {
             System.out.println("ноль рублей");
         } else {
-            System.out.println(numberSign + ddd);
+            System.out.println(numberSign + numeralWordsString);
         }
     }
 
