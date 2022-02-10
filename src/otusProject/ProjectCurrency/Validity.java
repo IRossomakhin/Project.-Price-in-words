@@ -8,7 +8,7 @@ public class Validity {
         this.number = number;
     }
 
-    public boolean validity() {
+    public boolean checkForValidity() {
 
         try {
             Double.parseDouble(number);

@@ -66,7 +66,7 @@ public class NumbersInLetters {
                 if (i == 0) {
                     nameNumbersClass = Currency.getGenitivePlural();
                 } else {
-                    nameNumbersClass = NameNumberClass.nameClass[i][2];
+                    nameNumbersClass = NameNumberCategory.nameCategory[i][2];
                 }
                 // - 1 Род.падеж Мн.число - рублей";
             } else {
@@ -74,7 +74,7 @@ public class NumbersInLetters {
                     if (i == 0) {
                         nameNumbersClass = Currency.getNominativeSingular();
                     } else {
-                        nameNumbersClass = NameNumberClass.nameClass[i][0];
+                        nameNumbersClass = NameNumberCategory.nameCategory[i][0];
                     }
                     //" -2 Имен.падеж Ед.число - рубль";
 
@@ -83,7 +83,7 @@ public class NumbersInLetters {
                         if (i == 0) {
                             nameNumbersClass = Currency.getGenitiveSingular();
                         } else {
-                            nameNumbersClass = NameNumberClass.nameClass[i][1];
+                            nameNumbersClass = NameNumberCategory.nameCategory[i][1];
                         }//" -3 Род.падеж Ед.число - рубля";
                     } else {
                         if (i == 0) {
@@ -92,7 +92,7 @@ public class NumbersInLetters {
                             if (newNumeralsNumber[0] + newNumeralsNumber[1] + newNumeralsNumber[2] == 0) {
                                 nameNumbersClass = "";
                             } else {
-                                nameNumbersClass = NameNumberClass.nameClass[i][2];
+                                nameNumbersClass = NameNumberCategory.nameCategory[i][2];
                             }
                         }//" - 4 Род.падеж Мн.число - рублей";
                     }

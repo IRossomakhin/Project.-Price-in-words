@@ -9,7 +9,7 @@ public class PriceInWords {
     }
 
 
-    public void builderWorld(NumberReader numberReader) {
+    public void translationInWorld(NumberReader numberReader) {
 
         Currency currency1 = new Currency("рубль", "рубля", "рублей");
         //Currency currency2 = new Currency("доллар", "доллара", "долларов");
@@ -19,7 +19,7 @@ public class PriceInWords {
         String newNumber = numberReader.numberPrice();
 
         Validity validity1 = new Validity(newNumber);
-        boolean v = validity1.validity();
+        boolean v = validity1.checkForValidity();
         if (v) {
             long numberPrice = Long.parseLong(newNumber);
             System.out.println("Спасибо! Ваше число: " + numberPrice);
