@@ -4,7 +4,6 @@ public class NumbersInLetters {
     long numberPrice;
     public  String finalNumber;
     public  String nameNumbersClass;
-    //public  String numeralWordsString;
     public  String numberSign;
 
     public void setNumeralsNumber(long numberPrice) {
@@ -13,8 +12,7 @@ public class NumbersInLetters {
 
     public final void getNumeralsNumber() {
         int[] newNumeralsNumber = new int[3];
-       // numeralWordsString = "";
-        StringBuilder total = new StringBuilder();
+        StringBuilder totalWord = new StringBuilder();
         numberSign = "";
         int i = 0;
 
@@ -101,10 +99,10 @@ public class NumbersInLetters {
                 }
             }
 
-            total.insert(0,nameNumbersClass);
-            total.insert(0," ");
-            total.insert(0,finalNumber);
-            total.insert(0," ");
+            totalWord.insert(0,nameNumbersClass);
+            totalWord.insert(0," ");
+            totalWord.insert(0,finalNumber);
+            totalWord.insert(0," ");
           //  numeralWordsString = finalNumber + " " + nameNumbersClass + " " + numeralWordsString;
             if (integerPartClassNumber == 0) {
                 break;
@@ -117,8 +115,7 @@ public class NumbersInLetters {
         if (numberPrice == 0) {
             System.out.println("ноль " + Currency.getGenitivePlural());
         } else {
-         //   System.out.println(numberSign + numeralWordsString);
-            System.out.println(numberSign + total);
+            System.out.println(numberSign + totalWord);
         }
     }
 

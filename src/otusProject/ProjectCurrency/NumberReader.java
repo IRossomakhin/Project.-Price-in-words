@@ -1,6 +1,6 @@
 package otusProject.ProjectCurrency;
 
-public interface EnterNumber {
+public interface NumberReader {
     String numberPrice();
 
 }

@@ -2,7 +2,7 @@ package otusProject.ProjectCurrency;
 
 import java.util.Scanner;
 
-public class EnterNumberImpl implements EnterNumber {
+public class NumberReaderImpl implements NumberReader {
     @Override
     public final String numberPrice() {
         System.out.println("Введите число");

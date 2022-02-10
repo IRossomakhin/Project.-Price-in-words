@@ -6,9 +6,9 @@ public class TranslatingNumbersIntoWords {
 
 
     public static void main(String[] args) {
-        EnterNumber enterNumber = new EnterNumberImpl();
-        PriceInWords priceInWords = new PriceInWords(enterNumber);
-        priceInWords.builderWorld(enterNumber);
+        NumberReader numberReader = new NumberReaderImpl();
+        PriceInWords priceInWords = new PriceInWords(numberReader);
+        priceInWords.builderWorld(numberReader);
 
     }
 }

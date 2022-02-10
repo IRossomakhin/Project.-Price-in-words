@@ -1,14 +1,15 @@
 package otusProject.ProjectCurrency;
 
 public class Currency {
+    //public static int idCurrency;
     public static String nominativeSingular;
     public static String genitiveSingular;
     public static String genitivePlural;
 
     Currency(String nominativeSingular, String genitiveSingular, String genitivePlural) {
-        Currency.nominativeSingular = nominativeSingular;
-        Currency.genitiveSingular = genitiveSingular;
-        Currency.genitivePlural = genitivePlural;
+        this.nominativeSingular = nominativeSingular;
+        this.genitiveSingular = genitiveSingular;
+        this.genitivePlural = genitivePlural;
     }
 
     public static String getNominativeSingular() {
